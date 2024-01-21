@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="style.css">
 <style>
 .sidebar{
+display:block;
 position: fixed;
 width: 345px;
 height: 100%;
@@ -28,7 +29,7 @@ position:fixed;
 background: rgba(255, 255, 255, 1);
 margin-top:-7rem;
 margin-left:345px;
-width: calc(100%-345px);
+width:90%;
 height: 100px;
 box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
@@ -102,11 +103,9 @@ margin: 4rem 1rem 0rem 1.3rem;
 
 th,td{
 text-align:left;
-padding-right:8.5rem;
 padding-top:1.5rem;
-font-size:17px;
+font-size:1em;
 }
-
 .s{
 display:flex;
 flex-wrap:wrap;
@@ -147,10 +146,12 @@ margin-left:-1.5rem;
 margin-left:1.5rem;
 }
 .se1{
-margin-left:32rem;
+float:right;
+margin-right:2rem;
 }
 .se2{
-margin-left:8rem;
+float:right;
+margin-right:2rem;
 }
 .d1{
 background-color:#ffff;
@@ -160,20 +161,32 @@ border: 1px solid #ffff;
 }
 .d2{
 text-align:center;
-margin-left:15rem;
 }
 .d3{
-text-align:center;
-margin-left:22rem;
+float:right;
+margin-right:2rem;
 }
 .ite{
-padding-right:1rem;
-padding-top:0rem;
-font-size:15px;
+font-size:1em;
 }
-
-@media only screen and (max-width:650px) {
+d{
+display:inline-block;
+}
+.close{
+display:none;
+float:right;
+text-align:center;
+margin-right:1rem;
+margin-top:1rem;
+color:#ffff;
+border: 1px solid #DD2F6E;
+background-color:#DD2F6E;
+width:20px;
+height:20px;
+}
+@media only screen and (max-width:500px) {
 .sidebar{
+position: fixed;
 display:none;
 }
 .dash{
@@ -189,9 +202,7 @@ margin-right:0rem;
 display:none;
 }
 .d3{
-display:flex;
-flex-wrap:wrap;
-text-align:right;
+float:right;
 justify-content:right;
 }
 .ttable{
@@ -223,234 +234,31 @@ margin: 4rem 1rem 0rem 0rem;
 }
 th,td{
 text-align:left;
-padding-right:1rem;
 padding-top:1.5rem;
-font-size:13px;
-}
-.se1{
-display:inline-block;
-flex-wrap:wrap;
-margin-left:1rem;
-text-align:right;
-justify-content:right;
-}
-.se2{
-display:inline-block;
-flex-wrap:wrap;
-margin-left:1rem;
-text-align:right;
-justify-content:right;
+font-size:0.8em;
 }
 .ite{
-padding-right:0rem;
-font-size:12px;
+font-size:1em;
+}
+.close{
+display:block;
+margin-right:3rem;
 }
 }
-@media only screen and (400px <= width <= 500px){
-.se1{
-margin-left:10rem;
-}
-.se2{
-margin-left:10rem;
-}
-th,td{
-text-align:left;
-padding-right:5rem;
-padding-top:1.5rem;
-font-size:14px;
-}
-.ite{
-padding-right:3.7rem;
-font-size:15px;
-}
-}
-@media only screen and (500px <= width <= 600px){
-.se1{
-margin-left:15rem;
-}
-.se2{
-margin-left:15rem;
-}
-th,td{
-text-align:left;
-padding-right:5rem;
-padding-top:1.5rem;
-font-size:17px;
-}
-.ite{
-padding-right:6rem;
-font-size:20px;
-}
-}
-@media only screen and (600px <= width <= 700px){
-.se1{
-margin-left:21rem;
-}
-.se2{
-margin-left:21rem;
-}
-th,td{
-text-align:left;
-padding-right:8rem;
-padding-top:1.5rem;
-font-size:17px;
-}
-.ite{
-padding-right:12rem;
-font-size:20px;
-}
-}
-@media only screen and (700px <= width <= 800px){
-.se1{
-margin-left:25rem;
-}
-.se2{
-margin-left:25rem;
-}
-th,td{
-text-align:left;
-padding-right:8rem;
-padding-top:1.5rem;
-font-size:17px;
-}
-.ite{
-padding-right:15rem;
-font-size:22px;
-}
-}
-@media only screen and (800px <= width <= 900px){
-.se1{
-margin-left:33rem;
-}
-.se2{
-margin-left:33rem;
-}
-th,td{
-text-align:left;
-padding-right:10rem;
-padding-top:1.5rem;
-font-size:17px;
-}
-.ite{
-padding-right:19rem;
-font-size:25px;
-}
-}
-@media only screen and (900px <= width <= 1000px){
-.se1{
-margin-left:40rem;
-}
-.se2{
-margin-left:40rem;
-}
-th,td{
-text-align:left;
-padding-right:12rem;
-padding-top:1.5rem;
-font-size:17px;
-}
-.ite{
-padding-right:27rem;
-font-size:25px;
-}
-}
-@media only screen and (1000px <= width <= 1100px){
-.se1{
-margin-left:45rem;
-}
-.se2{
-margin-left:45rem;
-}
-th,td{
-text-align:left;
-padding-right:15rem;
-padding-top:1.5rem;
-font-size:20px;
-}
-.ite{
-padding-right:30rem;
-font-size:30px;
-}
-}
-@media only screen and (1100px <= width <= 1200px){
+
+@media only screen and (500px <= width <= 1300px){
 .sidebar{
 display:none;
 }
-.dash{
-margin-left:0;
-width:100%;
-}
-.dash-item{
-display:flex;
-}
-.cards{
-margin-left:0;
-}
-.ttable{
-margin-left:0;
-}
-.se1{
-margin-left:20rem;
-}
-.se2{
-margin-left:13rem;
-}
-th,td{
-text-align:left;
-padding-right:5rem;
-padding-top:1.5rem;
-font-size:17px;
-}
-.ite{
-padding-right:7rem;
-font-size:15px;
-}
-}
-@media only screen and (1200px <= width <= 1300px){
-.sidebar{
-display:none;
+.close{
+display:block;
 }
 .dash{
-width:100%;
-margin-left:0;
-}
-.dash-item{
-display:flex;
-flex-wrap:wrap;
-}
-.cards{
-margin-left:0;
-}
-.ttable{
-margin-left:0;
-}
-.se1{
-margin-left:25rem;
-}
-.se2{
-margin-left:18rem;
-}
-th,td{
-text-align:left;
-padding-right:6rem;
-padding-top:1.5rem;
-font-size:17px;
-}
-.ite{
-padding-right:8.5rem;
-font-size:15px;
-}
-}
-@media only screen and (650px <= width <= 1100px){
-.sidebar{
-display:none;
-}
-.dash{
-margin-left:0px;
+margin-left:0rem;
 width:100%;
 }
 .cards{
-margin-left:0px;
+margin-left:0rem;
 width:100%;
 }
 .cards-container{
@@ -461,22 +269,31 @@ grid-template-columns:auto auto;
 display:none;
 }
 .d3{
-margin-left:10rem;
-display:flex;
-flex-content:flex end;
-justify-content: right;
-text-align:right;
+float:right;
+justify-content:right;
+margin-right:2rem;
 }
 .ttable{
-margin-left:0px;
+width:100%;
+margin-left:0rem;
 margin-top:8rem;
 }
 .ttable-container{
 display:grid;
 grid-template-columns: auto;
 }
+.ite{
+font-size:1.5em;
 }
-
+}
+@media only screen and (900px <= width <= 1300px){
+.ttable-container{
+display:grid;
+grid-template-columns: auto auto;
+.ite{
+font-size:1em;
+}
+}
 </style>
 </head>
 <body>
@@ -499,7 +316,7 @@ grid-template-columns: auto;
 <div class="ttable-container">
 <div class="ttable-item"><h3>Recent Projects
 <button class="see se1">See all<div class="las la-arrow-right"></div></button></h3>
-<table>
+<table style="width:100%;">
 <th style="border-top:1px solid #B6B2B2;border-bottom:1px solid #B6B2B2;">Project Title</th><th style="border-top:1px solid #B6B2B2;border-bottom:1px solid #B6B2B2;">Department</th><th style="padding-right:0px;border-top:1px solid #B6B2B2;border-bottom:1px solid #B6B2B2;">Status</th>
 <tr><td>UI/UX Design</td><td>UI Team</td><td><div class="circle"style="background-color:#5C3A94"></div>review</td></tr>
 <tr><td>Web Development</td><td>Frontend</td><td><div class="circle"style="background-color:#EA3B88;"></div>In progress</td></tr>
@@ -513,44 +330,44 @@ grid-template-columns: auto;
 </table></div>
 <div class="ttable-item"><h3>New Customer
 <button class="see se2">See all<div class="las la-arrow-right"></div></button></h3>
-<table>
+<table style="width:100%;">
 <tr><td class="ite" style="border-top:1px solid #B6B2B2;"><div class="s"><h2><img src="img/2.jpg" width="30px" height="30px" alt=""style="border-radius:30px;">&nbsp;&nbsp;<h4 style="margin-top:1rem;">Lewis S.Cunningham<br><div class="add"><h5 style="margin: 0.5rem;">CEO Excerpt</h5></div></h4></h2></div></td><td style="font-size:17px;padding-right: 0rem;padding-top:0rem;border-top:1px solid #B6B2B2;">
-<div class="con" style="margin-left:5rem;">
+<div class="con" style="float:right;margin-right:0.5rem;">
 <div class="las la-user-circle"></div>
 <div class="las la-comment"></div>
 <div class="las la-phone"></div></div>
 </td>
 </tr>
 <tr><td class="ite"><div class="s"><h2><img src="img/2.jpg" width="30px" height="30px" alt=""style="border-radius:30px;">&nbsp;&nbsp;<h4 style="margin-top:1rem;">Lewis S.Cunningham<br><div class="add"><h5 style="margin: 0.5rem;">CEO Excerpt</h5></div></h4></h2></div></td><td style="font-size:17px;padding-right: 0rem;padding-top:0rem;">
-<div class="con" style="margin-left:5rem;">
+<div class="con" style="float:right;margin-right:0.5rem;">
 <div class="las la-user-circle"></div>
 <div class="las la-comment"></div>
 <div class="las la-phone"></div></div>
 </td>
 </tr>
 <tr><td class="ite"><div class="s"><h2><img src="img/2.jpg" width="30px" height="30px" alt=""style="border-radius:30px;">&nbsp;&nbsp;<h4 style="margin-top:1rem;">Lewis S.Cunningham<br><div class="add"><h5 style="margin: 0.5rem;">CEO Excerpt</h5></div></h4></h2></div></td><td style="font-size:17px;padding-right: 0rem;padding-top:0rem;">
-<div class="con" style="margin-left:5rem;">
+<div class="con" style="float:right;margin-right:0.5rem;">
 <div class="las la-user-circle"></div>
 <div class="las la-comment"></div>
 <div class="las la-phone"></div></div>
 </td>
 </tr>
 <tr><td class="ite"><div class="s"><h2><img src="img/2.jpg" width="30px" height="30px" alt=""style="border-radius:30px;">&nbsp;&nbsp;<h4 style="margin-top:1rem;">Lewis S.Cunningham<br><div class="add"><h5 style="margin: 0.5rem;">CEO Excerpt</h5></div></h4></h2></div></td><td style="font-size:17px;padding-right: 0rem;padding-top:0rem;">
-<div class="con" style="margin-left:5rem;">
+<div class="con" style="float:right;margin-right:0.5rem;">
 <div class="las la-user-circle"></div>
 <div class="las la-comment"></div>
 <div class="las la-phone"></div></div>
 </td>
 </tr>
 <tr><td class="ite"><div class="s"><h2><img src="img/2.jpg" width="30px" height="30px" alt=""style="border-radius:30px;">&nbsp;&nbsp;<h4 style="margin-top:1rem;">Lewis S.Cunningham<br><div class="add"><h5 style="margin: 0.5rem;">CEO Excerpt</h5></div></h4></h2></div></td><td style="font-size:17px;padding-right: 0rem;padding-top:0rem;">
-<div class="con" style="margin-left:5rem;">
+<div class="con" style="float:right;margin-right:0.5rem;">
 <div class="las la-user-circle"></div>
 <div class="las la-comment"></div>
 <div class="las la-phone"></div></div>
 </td>
 </tr>
 <tr><td class="ite"><div class="s"><h2><img src="img/2.jpg" width="30px" height="30px" alt=""style="border-radius:30px;">&nbsp;&nbsp;<h4 style="margin-top:1rem;">Lewis S.Cunningham<br><div class="add"><h5 style="margin: 0.5rem;">CEO Excerpt</h5></div></h4></h2></div></td><td style="font-size:17px;padding-right: 0rem;padding-top:0rem;">
-<div class="con" style="margin-left:5rem;">
+<div class="con" style="float:right;margin-right:0.5rem;">
 <div class="las la-user-circle"></div>
 <div class="las la-comment"></div>
 <div class="las la-phone"></div></div>
@@ -560,15 +377,16 @@ grid-template-columns: auto;
 </div>
 </div>
 <div class ="sidebar" id="mySidebar">
-<h1 style="color:#FFFF;margin-bottom:4rem;margin-left:2rem;"class="lab la-accusoft">&nbsp;&nbsp;Accusoft</h1>
+<button class="close" onclick="sidebar_close()"><b>X</b></button>
+<h1 style="color:#FFFF;margin-bottom:4rem;margin-left:2rem;"class="lab la-accusoft">&nbsp;&nbsp;<d>Accusoft</d></h1>
 <ul class ="font">
-<li><a href =""class="sidebar-font "><div class="select"><b><div class="las la-igloo sp">&nbsp;&nbsp;Dashboard</div></div></b></a></li>
-<li><a href =""class="sidebar-font "><div class="las la-users">&nbsp;&nbsp;Customers</div></a></li>
-<li><a href =""class="sidebar-font "><div class="las la-clipboard-list">&nbsp;&nbsp;Projects</div></a></li>
-<li><a href =""class="sidebar-font "><div class="las la-shopping-bag">&nbsp;&nbsp;Orders</div></a></li>
-<li><a href =""class="sidebar-font "><div class="las la-receipt">&nbsp;&nbsp;Inventory</div></a></li>
-<li><a href =""class="sidebar-font "><div class="las la-user-circle">&nbsp;&nbsp;Accounts</div></a></li>
-<li><a href =""class="sidebar-font "><div class="las la-clipboard-list">&nbsp;&nbsp;Tasks</div></a></li>
+<li><a href ="#"class="sidebar-font "><div class="select"><b><div class="las la-igloo sp">&nbsp;&nbsp;<d>Dashboard</d></div></div></b></a></li>
+<li><a href ="#"class="sidebar-font "><div class="las la-users">&nbsp;&nbsp;<d>Customers</d></div></a></li>
+<li><a href ="#"class="sidebar-font "><div class="las la-clipboard-list">&nbsp;&nbsp;<d>Projects</d></div></a></li>
+<li><a href ="#"class="sidebar-font "><div class="las la-shopping-bag">&nbsp;&nbsp;<d>Orders</d></div></a></li>
+<li><a href ="#"class="sidebar-font "><div class="las la-receipt">&nbsp;&nbsp;<d>Inventory</div></a></li>
+<li><a href ="#"class="sidebar-font "><div class="las la-user-circle">&nbsp;&nbsp;<d>Accounts</d></div></a></li>
+<li><a href ="#"class="sidebar-font "><div class="las la-clipboard-list">&nbsp;&nbsp;<d>Tasks</d></div></a></li>
 </ul>
 </div>
 </div>
